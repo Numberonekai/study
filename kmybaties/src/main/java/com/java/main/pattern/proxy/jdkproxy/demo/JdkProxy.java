@@ -21,8 +21,7 @@ public class JdkProxy implements InvocationHandler {
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        before();
-        Object result=method.invoke(this.person,args);
+         Object result=method.invoke(this.person,args);
         after();
         return result;
     }
