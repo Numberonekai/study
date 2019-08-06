@@ -9,6 +9,7 @@ import com.study.rpc.User;
  * @description:
  * @version: 1.0
  */
+@Server(value = IHelloService.class,version = "1.0")
 public class HelloServiceImpl implements IHelloService {
 
 

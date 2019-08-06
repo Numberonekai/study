@@ -10,6 +10,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 import java.net.Socket;
+import java.util.Map;
 
 /**
  * @auther: kai2.wang
@@ -20,9 +21,11 @@ import java.net.Socket;
 public class ProcessHandler implements Runnable{
 
     private Socket socket;
+    private Map benaMap;
 
-    public ProcessHandler(Socket socket) {
+    public ProcessHandler(Socket socket, Map benaMap) {
         this.socket = socket;
+        this.benaMap = benaMap;
     }
 
     @Override
@@ -66,22 +69,20 @@ public class ProcessHandler implements Runnable{
         Class tClass= null;
         try {
             tClass = Class.forName(request.getClassName());
-            Object[]  params=request.getParams();
-            Class<?>[] type=new Class<?>[params.length];
+            Object[] params = request.getParams();
+            Class<?>[] type = new Class<?>[params.length];
             for (int i = 0; i < params.length; i++) {
-                type[i]=params[i].getClass();
+                type[i] = params[i].getClass();
             }
-            Method method=tClass.getMethod(request.getMethod(),type);
-            return method.invoke(HelloServiceImpl.class.newInstance(),params);
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (NoSuchMethodException e) {
+            Method method = tClass.getMethod(request.getMethod(), type);
+            return method.invoke(benaMap.get(request.getClassName()), params);
+        }catch (NoSuchMethodException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         } catch (InvocationTargetException e) {
             e.printStackTrace();
-        } catch (InstantiationException e) {
+        }catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
         return null;
