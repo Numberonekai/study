@@ -9,7 +9,6 @@ import java.io.Serializable;
  * @version: 1.0
  */
 public class User implements Serializable {
-
     private Integer id;
     private String name;
 
