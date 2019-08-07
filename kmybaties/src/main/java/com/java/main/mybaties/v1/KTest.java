@@ -1,4 +1,4 @@
-package com.java.main.mybaties;
+package com.java.main.mybaties.v1;
 
 /**
  * @Auther: kai2.wang

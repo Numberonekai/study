@@ -1,7 +1,11 @@
-package com.example.demo.Controller;
+package com.spring.wk.Controller;
 
 
 import com.example.demo.annotation.*;
+import com.spring.wk.annotation.Controller;
+import com.spring.wk.annotation.RequestMapping;
+import com.spring.wk.annotation.RequestParam;
+import com.spring.wk.annotation.Resource;
 
 /**
  * @Auther: kai2.wang

@@ -1,15 +1,16 @@
-package com.example.demo.annotation;
+package com.spring.wk.annotation;
 
 import java.lang.annotation.*;
 
 /**
  * @Auther: kai2.wang
- * @Date: 2019/4/28 18:05
+ * @Date: 2019/4/28 18:17
  * @Description:
  */
-@Target(ElementType.TYPE)
+@Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-public @interface Service {
+public @interface RequestMapping {
+
     String value() default "";
 }

@@ -1,6 +1,6 @@
-package com.example.demo.Controller;
+package com.spring.wk.Controller;
 
-import com.example.demo.annotation.Service;
+import com.spring.wk.annotation.Service;
 
 /**
  * @Auther: kai2.wang
