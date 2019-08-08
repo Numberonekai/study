@@ -1,4 +1,4 @@
-package com.spring.wk.Controller;
+package com.spring.demo.Controller;
 
 /**
  * @Auther: kai2.wang

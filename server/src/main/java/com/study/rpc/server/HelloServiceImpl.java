@@ -17,7 +17,7 @@ public class HelloServiceImpl implements IHelloService {
     public User getUser(Integer id) {
         User user=new User();
         user.setId(1);
-        user.setName("wk");
+        user.setName("demo");
         return user;
     }
 }

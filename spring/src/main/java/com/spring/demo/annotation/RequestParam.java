@@ -1,4 +1,4 @@
-package com.spring.wk.annotation;
+package com.spring.demo.annotation;
 
 import java.lang.annotation.*;
 

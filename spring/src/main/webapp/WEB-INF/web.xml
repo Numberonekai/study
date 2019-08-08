@@ -7,7 +7,7 @@
     <display-name>springTest</display-name>
     <servlet>
         <servlet-name>springTest</servlet-name>
-        <servlet-class>com.spring.wk.demo.DispathServelt</servlet-class>
+        <servlet-class>com.spring.demo.demo.DispathServelt</servlet-class>
         <init-param>
             <param-name>contextConfigLocation</param-name>
             <param-value>classpath:application.properties</param-value>

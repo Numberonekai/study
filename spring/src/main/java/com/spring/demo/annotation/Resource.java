@@ -1,16 +1,16 @@
-package com.spring.wk.annotation;
+package com.spring.demo.annotation;
 
 import java.lang.annotation.*;
 
 /**
  * @Auther: kai2.wang
- * @Date: 2019/4/28 18:04
+ * @Date: 2019/4/30 14:53
  * @Description:
  */
-@Target(ElementType.TYPE)
+@Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-public @interface Controller {
-
+public @interface Resource {
     String value() default "";
+
 }

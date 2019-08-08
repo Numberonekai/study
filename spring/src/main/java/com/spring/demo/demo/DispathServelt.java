@@ -1,9 +1,9 @@
-package com.spring.wk.demo;
+package com.spring.demo.demo;
 
-import com.spring.wk.Controller.DemoController;
-import com.spring.wk.annotation.Controller;
-import com.spring.wk.annotation.Resource;
-import com.spring.wk.annotation.Service;
+import com.spring.demo.Controller.DemoController;
+import com.spring.demo.annotation.Controller;
+import com.spring.demo.annotation.Resource;
+import com.spring.demo.annotation.Service;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
