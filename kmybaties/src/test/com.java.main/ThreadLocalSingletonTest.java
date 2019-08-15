@@ -18,12 +18,12 @@ public class ThreadLocalSingletonTest {
         System.out.println(ThreadLocalSingleton.getInstance());
 
 
-        Thread thread=new Thread(()->{ThreadLocalSingleton.getInstance();
-            System.out.println(ThreadLocalSingleton.getInstance());});
-        thread.start();
-
-        Thread thread2=new Thread(()->{ThreadLocalSingleton.getInstance();     System.out.println(ThreadLocalSingleton.getInstance());});
-        thread2.start();
+//        Thread thread=new Thread(()->{ThreadLocalSingleton.getInstance();
+//            System.out.println(ThreadLocalSingleton.getInstance());});
+//        thread.start();
+//
+//        Thread thread2=new Thread(()->{ThreadLocalSingleton.getInstance();     System.out.println(ThreadLocalSingleton.getInstance());});
+//        thread2.start();
 
     }
 }

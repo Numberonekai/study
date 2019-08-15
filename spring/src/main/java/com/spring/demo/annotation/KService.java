@@ -4,13 +4,12 @@ import java.lang.annotation.*;
 
 /**
  * @Auther: kai2.wang
- * @Date: 2019/4/28 18:04
+ * @Date: 2019/4/28 18:05
  * @Description:
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-public @interface Controller {
-
+public @interface KService {
     String value() default "";
 }

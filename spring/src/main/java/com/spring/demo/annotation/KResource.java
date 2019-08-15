@@ -4,13 +4,13 @@ import java.lang.annotation.*;
 
 /**
  * @Auther: kai2.wang
- * @Date: 2019/4/28 18:17
+ * @Date: 2019/4/30 14:53
  * @Description:
  */
-@Target(ElementType.METHOD)
+@Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-public @interface RequestMapping {
-
+public @interface KResource {
     String value() default "";
+
 }

@@ -7,13 +7,18 @@
     <display-name>springTest</display-name>
     <servlet>
         <servlet-name>springTest</servlet-name>
-        <servlet-class>com.spring.demo.demo.DispathServelt</servlet-class>
+        <servlet-class>com.spring.demo.dispatch.v1.DispathServelt</servlet-class>
         <init-param>
             <param-name>contextConfigLocation</param-name>
             <param-value>classpath:application.properties</param-value>
         </init-param>
+        <init-param>
+            <param-name>useFileMappedBuffer</param-name>
+            <param-value>false</param-value>
+        </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
+
 
     <servlet-mapping>
         <servlet-name>springTest</servlet-name>

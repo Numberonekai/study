@@ -1,13 +1,13 @@
 package com.spring.demo.Controller;
 
-import com.spring.demo.annotation.Service;
+import com.spring.demo.annotation.KService;
 
 /**
  * @Auther: kai2.wang
  * @Date: 2019/4/30 16:30
  * @Description:
  */
-@Service("demoService")
+@KService("demoService")
 public class DemoServiceImpl implements  DemoService {
 
     @Override

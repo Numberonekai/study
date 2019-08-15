@@ -10,7 +10,7 @@ import java.lang.annotation.*;
 @Target(ElementType.PARAMETER)
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
-public @interface RequestParam {
+public @interface KRequestParam {
 
     String value() default  "";
 }
