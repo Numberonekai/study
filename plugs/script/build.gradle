@@ -1,0 +1,14 @@
+buildscript{
+    repositories{
+        maven{
+            mavenLocal()
+        }
+    }
+
+    dependencies {
+        classpath group:'com.plugs.study.',
+                  name:'plugs',
+                  versrion:'1.0-SNAPSHOT'
+
+    }
+}

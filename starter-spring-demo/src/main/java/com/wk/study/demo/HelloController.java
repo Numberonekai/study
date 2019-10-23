@@ -1,6 +1,7 @@
 package com.wk.study.demo;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -13,9 +14,15 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
 
 
-    @GetMapping("hellow")
-    public String hellowWorld(){
+    @GetMapping(name="hellowWorld")
+    public String hellowWorld(@RequestParam String aa,@RequestParam String bb){
         System.out.println("this is hellow Controller");
-        return "hellow";
+
+        StringBuilder str=new StringBuilder();
+        str.append("select * from ");
+        if(aa==null || aa.equals("")){
+            str.append("where aa=1");
+        }
+        return  null;
     }
 }

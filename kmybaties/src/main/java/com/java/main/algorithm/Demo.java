@@ -20,7 +20,9 @@ public class Demo {
 //        Demo.sheelSort("希尔", getData());
         //快速排序
         Demo.quickSort("快速", getData());
-//        System.out.println(new Date().toInstant());
+
+        //裴波那契数列
+
     }
 
     private static Integer[] getData() {
@@ -52,16 +54,25 @@ public class Demo {
      * @param data
      */
     public static void insertSort(String name, Integer[] data) {
-        for (int i = 1; i < data.length - 1; i++) {
-            for (int j = i + 1; j >= 1; j--) {
-                if (data[j - 1] >= data[j]) {
-                    int tmp = data[j];
-                    data[j] = data[j - 1];
-                    data[j - 1] = tmp;
-                } else {
-                    break;
-                }
+//        for (int i = 1; i < data.length - 1; i++) {
+//            for (int j = i + 1; j >= 1; j--) {
+//                if (data[j - 1] >= data[j]) {
+//                    int tmp = data[j];
+//                    data[j] = data[j - 1];
+//                    data[j - 1] = tmp;
+//                } else {
+//                    break;
+//                }
+//            }
+//        }
+        for (int i = 0; i < data.length - 1; i++) {
+            int current=data[i+1];
+            int pre=i;
+            while(pre>=0 && data[pre]>=current){
+                data[pre+1]=data[pre];
+                pre--;
             }
+            data[pre+1]=current;
         }
         Tools.printData(name, data);
     }

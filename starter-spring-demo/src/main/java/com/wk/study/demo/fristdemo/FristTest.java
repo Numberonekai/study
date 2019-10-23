@@ -13,15 +13,17 @@ import org.springframework.context.annotation.ComponentScan;
 public class FristTest {
 
     public static void main(String[] args) {
-        AnnotationConfigApplicationContext annotationConfigApplicationContext= new AnnotationConfigApplicationContext(FristTest.class);
-//        TestService testService= (TestService) annotationConfigApplicationContext.getBean(TestService.class);
+        AnnotationConfigApplicationContext annotationConfigApplicationContext= new AnnotationConfigApplicationContext(ConfigDemo.class);
 
-//        System.out.println(testService.sayHello());
 
         String[] datas=annotationConfigApplicationContext.getBeanDefinitionNames();
         for (int i = 0; i < datas.length; i++) {
             System.out.println(datas[i]);
         }
+
+                TestService testService= (TestService) annotationConfigApplicationContext.getBean(TestService.class);
+
+        System.out.println(testService.sayHello());
 
     }
 

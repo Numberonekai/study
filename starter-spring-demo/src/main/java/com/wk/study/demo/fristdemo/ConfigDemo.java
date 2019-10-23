@@ -2,6 +2,7 @@ package com.wk.study.demo.fristdemo;
 
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Lazy;
 
 /**
  * @auther: kai2.wang
@@ -13,6 +14,7 @@ import org.springframework.context.annotation.Bean;
 public class ConfigDemo {
 
     @Bean
+    @Lazy
     public TestService testService(){
         return new TestService();
     }

@@ -1,22 +1,24 @@
-package com.java.main.pattern.proxy.jdkproxy.demo;
+package com.java.main.pattern.proxy.jdkproxy.demo2;
 
-import java.lang.reflect.InvocationHandler;
+import com.java.main.pattern.proxy.jdkproxy.demo.Person;
+
+import java.io.IOException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 /**
- * @Auther: kai2.wang
- * @Date: 2019/7/26 10:06
- * @Description:
+ * @auther: kai2.wang
+ * @date: 2019/10/23 15:09
+ * @description:
+ * @version: 1.0
  */
-public class Meipo implements InvocationHandler {
-
+public class KMeipo implements KInvocationHandler {
     private Person person;
 
-    public Object getInstance(Person person){
+    public Object getInstance(Person person) throws IOException {
         this.person=person;
         Class clazz=person.getClass();
-        return Proxy.newProxyInstance(clazz.getClassLoader(),clazz.getInterfaces(),this);
+        return KProxy.newProxyInstance(new KClassLoader(),clazz.getInterfaces(),this);
     }
 
     @Override
