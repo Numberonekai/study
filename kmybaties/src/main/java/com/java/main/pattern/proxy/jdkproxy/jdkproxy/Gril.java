@@ -1,4 +1,4 @@
-package com.java.main.pattern.proxy.jdkproxy.demo;
+package com.java.main.pattern.proxy.jdkproxy.jdkproxy;
 
 /**
  * @Auther: kai2.wang

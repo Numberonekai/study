@@ -1,4 +1,4 @@
-package com.java.main.pattern.proxy.jdkproxy.demo2;
+package com.java.main.pattern.proxy.jdkproxy.kproxy;
 
 import java.lang.reflect.Method;
 

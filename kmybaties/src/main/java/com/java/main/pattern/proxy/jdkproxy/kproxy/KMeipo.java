@@ -1,10 +1,9 @@
-package com.java.main.pattern.proxy.jdkproxy.demo2;
+package com.java.main.pattern.proxy.jdkproxy.kproxy;
 
-import com.java.main.pattern.proxy.jdkproxy.demo.Person;
+import com.java.main.pattern.proxy.jdkproxy.jdkproxy.Person;
 
 import java.io.IOException;
 import java.lang.reflect.Method;
-import java.lang.reflect.Proxy;
 
 /**
  * @auther: kai2.wang

@@ -1,11 +1,10 @@
-package com.java.main.pattern.proxy.jdkproxy.demo2;
+package com.java.main.pattern.proxy.jdkproxy.kproxy;
 
 import javax.tools.JavaCompiler;
 import javax.tools.StandardJavaFileManager;
 import javax.tools.ToolProvider;
 import java.io.*;
 import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.HashMap;

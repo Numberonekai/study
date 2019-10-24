@@ -1,8 +1,7 @@
-package com.java.main.pattern.proxy.jdkproxy.demo2;
+package com.java.main.pattern.proxy.jdkproxy.kproxy;
 
-import com.java.main.pattern.proxy.jdkproxy.demo.Gril;
-import com.java.main.pattern.proxy.jdkproxy.demo.Meipo;
-import com.java.main.pattern.proxy.jdkproxy.demo.Person;
+import com.java.main.pattern.proxy.jdkproxy.jdkproxy.Gril;
+import com.java.main.pattern.proxy.jdkproxy.jdkproxy.Person;
 
 import java.io.IOException;
 
