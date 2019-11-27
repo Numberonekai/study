@@ -5,7 +5,9 @@ import java.util.concurrent.Semaphore;
 /**
  * @auther: kai2.wang
  * @date: 2019/10/22 09:18
- * @description:
+ * @description:  实现限流
+ * 1.公平和非公平
+ *
  * @version: 1.0
  */
 public class SeamphoreDemo {

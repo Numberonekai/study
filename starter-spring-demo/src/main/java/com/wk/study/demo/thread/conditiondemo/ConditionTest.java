@@ -18,8 +18,9 @@ public class ConditionTest {
     public static void main(String[] args) {
         Lock lock=new ReentrantLock();
         Condition condition=lock.newCondition();
-        new Thread(new ConditionWait(lock,condition)).start();
         new Thread(new ConditionNotify(lock,condition)).start();
-
+        new Thread(new ConditionNotify(lock,condition)).start();
+        new Thread(new ConditionNotify(lock,condition)).start();
+        new Thread(new ConditionWait(lock,condition)).start();
     }
 }
