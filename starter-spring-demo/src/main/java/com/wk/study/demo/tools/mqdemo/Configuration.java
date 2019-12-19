@@ -1,4 +1,4 @@
-package com.wk.study.demo.mqdemo;
+package com.wk.study.demo.tools.mqdemo;
 
 import org.apache.pulsar.client.api.PulsarClient;
 import org.apache.pulsar.client.api.PulsarClientException;
