@@ -9,11 +9,20 @@
            http://www.springframework.org/schema/util
        http://www.springframework.org/schema/util/spring-util-3.0.xsd">
 
-    <context:component-scan base-package="com.wk.study.demo.event">
+    <context:component-scan base-package="com.wk.study.demo.springdemo,com.wk.study.demo.event;">
     </context:component-scan>
 
 <!--    <context:component-scan base-package="com.zhaopin.framework.spring.config" />-->
+    <bean class="com.wk.study.demo.springdemo.User">
+        <property name="msg" value="this is frist msg"></property>
+        <!--        <property name="context" value="${thrift.http.context}"></property>-->
+        <!--        <property name="zkAddr" value="${thrift.zk.addr}"></property>-->
+    </bean>
 
+    <bean class="com.wk.study.demo.springdemo.UserBeanFactoryPostProcessor">
+    </bean>
+    <bean class="com.wk.study.demo.springdemo.DemoBeanPostProcessor">
+    </bean>
 
 <!--    <context:property-placeholder location="classpath:config.properties" />-->
 <!--    <util:properties id="config" location="classpath:config.properties" />-->

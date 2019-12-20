@@ -1,8 +1,10 @@
-package com.study.rpc.server.springdemo;
+package com.wk.study.demo.springdemo;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.*;
+import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
 import org.springframework.beans.factory.config.BeanPostProcessor;
+import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
@@ -15,10 +17,10 @@ import javax.annotation.PreDestroy;
  * @description:
  * @version: 1.0
  */
-public class User   implements BeanNameAware,BeanFactoryAware,ApplicationContextAware, InitializingBean,BeanPostProcessor, DisposableBean {
+public class User implements  BeanNameAware, BeanFactoryAware, ApplicationContextAware, InitializingBean, BeanPostProcessor, DisposableBean {
 
     @PostConstruct
-    public void init(){
+    public void init() {
         System.out.println("-----Start----");
     }
 
@@ -46,7 +48,7 @@ public class User   implements BeanNameAware,BeanFactoryAware,ApplicationContext
 
 
     @PreDestroy
-    public void end(){
+    public void end() {
         System.out.println("-----end----");
     }
 
@@ -75,4 +77,9 @@ public class User   implements BeanNameAware,BeanFactoryAware,ApplicationContext
     public void setMsg(String msg) {
         this.msg = msg;
     }
+
+//    @Override
+//    public void postProcessBeanFactory(ConfigurableListableBeanFactory configurableListableBeanFactory) throws BeansException {
+//        System.out.println("------BeanFactoryPostProcessor------");
+//    }
 }

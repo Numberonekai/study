@@ -12,7 +12,9 @@ import org.springframework.data.redis.core.RedisCallback;
 import org.springframework.data.redis.core.RedisOperations;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.SessionCallback;
+import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisCluster;
+import redis.clients.jedis.Pipeline;
 
 import java.util.List;
 
@@ -56,13 +58,20 @@ public class RedisTest {
         };
 
         Long start=System.currentTimeMillis();
-        List result = redisTemplate.executePipelined(DataAccessException);
-        System.out.println(result);
+//        List result = redisTemplate.executePipelined(DataAccessException);
+//        System.out.println(result);
         Long end=System.currentTimeMillis();
-
         System.out.println(end-start);
-//        redisTemplate.executePipelined((RedisOperations re)->{});
         System.out.println(redisTemplate.opsForValue().get("test")+"-------");
+
+        Jedis jedis=new Jedis("127.0.0.1");
+        Pipeline pipeline=jedis.pipelined();
+        pipeline.multi();
+        System.out.println(pipeline.get("798"));
+        pipeline.set("789","123");
+        System.out.println(pipeline.get("798"));
+        pipeline.exec();
+        pipeline.sync();
 
 
 //        RedisTemplate redisTemplate= (RedisTemplate) annotationConfigApplicationContext.getBean("redisTemplate");
