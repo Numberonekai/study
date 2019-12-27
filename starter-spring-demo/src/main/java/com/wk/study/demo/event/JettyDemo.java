@@ -17,12 +17,13 @@ import org.springframework.web.servlet.DispatcherServlet;
 public class JettyDemo {
     public static void main(String[] args) throws Exception {
 
-        Server server = new Server(8080);
+        Server server = new Server(8081);
         ServletContextHandler springMvcHandler = new ServletContextHandler(ServletContextHandler.NO_SESSIONS);
-        springMvcHandler.setContextPath("/user");
+        springMvcHandler.setContextPath("/");
         XmlWebApplicationContext context = new XmlWebApplicationContext();
-//        context.setConfigLocation("spring.xml");
-//        springMvcHandler.addEventListener(new ContextLoaderListener(context));
+        context.setConfigLocation("classpath:spring.xml");
+
+        springMvcHandler.addEventListener(new ContextLoaderListener(context));
         springMvcHandler.addServlet(new ServletHolder(new DispatcherServlet(context)),"/*");
         springMvcHandler.setDisplayName("thrift");
         server.setHandler(springMvcHandler);

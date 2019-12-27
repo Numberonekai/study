@@ -13,8 +13,8 @@
 //@Configuration
 //public class DemoConfiguration {
 //    @Bean
-//    public User test() {
-//        return new User();
+//    public UserData userData() {
+//        return new UserData();
 //    }
 //
 ////    @Bean
