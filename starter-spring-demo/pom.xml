@@ -16,7 +16,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <pulsar-client-version>2.3.2</pulsar-client-version>
+        <pulsar-client-version>2.7.5</pulsar-client-version>
     </properties>
 
     <dependencies>
